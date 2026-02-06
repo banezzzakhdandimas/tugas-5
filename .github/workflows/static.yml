@@ -1,43 +1,156 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+:root {
+    --dark-green: #1b4332;
+    --medium-green: #2d6a4f;
+    --light-green: #d8f3dc;
+    --accent-green: #74c69d;
+    --text-white: #ffffff;
+    --text-dark: #2d3436;
+}
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f0;
+    color: var(--text-dark);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+.resume-container {
+    width: 100%;
+    max-width: 900px;
+    background: white;
+    display: flex;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+/* Sidebar */
+.sidebar {
+    width: 35%;
+    background-color: var(--dark-green);
+    color: var(--text-white);
+    padding: 40px 25px;
+}
 
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--accent-green);
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-section h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 0.8rem;
+    color: var(--accent-green);
+}
+
+.sidebar h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--medium-green);
+    padding-bottom: 5px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.sidebar ul li {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar i {
+    width: 25px;
+    color: var(--accent-green);
+}
+
+/* Main Content */
+.main-content {
+    width: 65%;
+    padding: 50px 40px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: var(--dark-green);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: none;
+    border-top: 3px solid var(--light-green);
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.edu-item {
+    margin-bottom: 15px;
+}
+
+.edu-item h4 {
+    color: var(--medium-green);
+}
+
+.edu-item span {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #666;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background: var(--light-green);
+    color: var(--dark-green);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.empty-state {
+    font-style: italic;
+    color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+    }
+    .sidebar, .main-content {
+        width: 100%;
+    }
+}

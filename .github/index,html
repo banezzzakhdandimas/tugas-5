@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Dimas Yanto - Professional Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="resume-container">
+        <aside class="sidebar">
+            <div class="profile-section">
+                <img src="gemini-generated-image-8ebr2x8eb(1).png" alt="Dimas Yanto" class="profile-img">
+                <h1>DIMAS YANTO</h1>
+                <p class="tagline">Student & Fitness Enthusiast</p>
+            </div>
+
+            <div class="contact-section">
+                <h3>KONTAK</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +62 526771039</li>
+                    <li><i class="fas fa-calendar"></i> 17 Sept 2007</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Kp. Rancasabir RT 02/05</li>
+                </ul>
+            </div>
+
+            <div class="social-section">
+                <h3>MEDIA SOSIAL</h3>
+                <ul>
+                    <li><i class="fab fa-instagram"></i> @DIMAS X TOJI</li>
+                    <li><i class="fab fa-facebook"></i> -</li>
+                    <li><i class="fab fa-tiktok"></i> -</li>
+                </ul>
+            </div>
+
+            <div class="language-section">
+                <h3>BAHASA</h3>
+                <ul>
+                    <li>Indonesia (Fasih)</li>
+                    <li>Arab (Dasar)</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="about-me">
+                <h2>TENTANG DIRI</h2>
+                <hr>
+                <p>Saya adalah individu yang memiliki tingkat <strong>kepercayaan diri</strong> yang tinggi dalam menghadapi tantangan. Memiliki disiplin yang kuat, terutama dalam menjalani gaya hidup sehat melalui hobi GYM, yang membentuk mentalitas pantang menyerah dalam diri saya.</p>
+            </section>
+
+            <section class="education">
+                <h2>PENDIDIKAN</h2>
+                <hr>
+                <div class="edu-item">
+                    <h4>SMA KP Baleendah</h4>
+                    <span>Lulus Tahun 2026</span>
+                </div>
+                <div class="edu-item">
+                    <h4>SMP NEGERI 1 DAYEHKOLOT</h4>
+                    <span>Lulus Tahun 2023</span>
+                </div>
+                <div class="edu-item">
+                    <h4>SDN 03 DAYEHKOLOT</h4>
+                    <span>Lulus Tahun 2020</span>
+                </div>
+            </section>
+
+            <section class="skills">
+                <h2>KEAHLIAN & HOBI</h2>
+                <hr>
+                <div class="skill-tags">
+                    <span class="tag">Berolahraga</span>
+                    <span class="tag">GYM / Weightlifting</span>
+                    <span class="tag">Disiplin</span>
+                    <span class="tag">Percaya Diri</span>
+                </div>
+            </section>
+
+            <section class="experience">
+                <h2>PENGALAMAN & ORGANISASI</h2>
+                <hr>
+                <p class="empty-state">- Fokus pada pendidikan dan pengembangan kebugaran fisik -</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
